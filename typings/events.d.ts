@@ -69,7 +69,7 @@ export type EventType =
   | 'transitionEnd'
   | 'doubleClick'
 
-export type FireFunction = (element: Element, event: Event) => boolean
+export type FireFunction = (element: Element | Window, event: Event) => boolean
 export type FireObject = {
   [K in EventType]: (element: Element, options?: {}) => boolean
 }
